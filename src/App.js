@@ -13,8 +13,7 @@ import './index.css';
 const Main = () => (
 	<ReactiveBase
 		app="myappdemo"
-    credentials='cnjg9Mh5k:c18fa74e-33d4-4460-807c-712b54e002f4'
-		// enableAppbase
+    credentials='cnjg9Mh5k:c18fa74e-33d4-4460-807c-712b54e002f4' 
 	>
   <CategorySearch
     componentId="searchbox"
@@ -64,37 +63,24 @@ const Main = () => (
 									</ResultCard.Title>
 
 									<ResultCard.Description>
-										{/* <div className="flex column justify-space-between"> */}
-											{/* <div> */}
+										<div className="flex column justify-space-between">
+											<div>
 												<div>
 													by{' '}
 													<span className="authors-list">
 														{item.authors}
 													</span>
 												</div>
-												{/* <div className="ratings-list flex align-center">
-													<span className="stars">
-														{Array(item.average_rating_rounded)
-															.fill('x')
-															.map((
-																item, // eslint-disable-line
-																index,
-															) => (
-																<i
-																	className="fas fa-star"
-																	key={index} // eslint-disable-line
-																/>
-															))}
-													</span>
-													<span className="avg-rating">
-														({item.average_rating} avg)
-													</span>
-												</div> */}
-											{/* </div> */}
+												<div className="ratings-list flex align-center">
+                        <ResultCard.Description>
+                            {'*'.repeat(item.average_rating_rounded)}
+                        </ResultCard.Description>
+												</div>
+											</div>
 											<span className="pub-year">
 												Pub {item.original_publication_year}
 											</span>
-										{/* </div> */}
+										</div>
 									</ResultCard.Description>
 								</ResultCard>
 							))}
