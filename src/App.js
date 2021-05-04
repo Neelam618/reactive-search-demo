@@ -13,7 +13,7 @@ import './index.css';
 const Main = () => (
 	<ReactiveBase
 		app="good-books-ds"
-		url="https://a03a1cb71321:75b6603d-9456-4a5a-af6b-a487b309eb61@appbase-demo-ansible-abxiydt-arc.searchbase.io"
+    url='https://a03a1cb71321:75b6603d-9456-4a5a-af6b-a487b309eb61@appbase-demo-ansible-abxiydt-arc.searchbase.io'
 		enableAppbase
 	>
   <CategorySearch
@@ -28,7 +28,7 @@ const Main = () => (
   />
 		<div className="row reverse-labels">
 			<div className="col">
-				<SingleDropdownRange
+			<SingleDropdownRange
 					componentId="BookSensor"
 					dataField="average_rating"
 					title="SingleDropdownRange"
