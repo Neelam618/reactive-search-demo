@@ -5,27 +5,31 @@ import {
 	SingleDropdownRange,
 	ResultCard,
 	ReactiveList,
-  CategorySearch
+  	CategorySearch
 } from '@appbaseio/reactivesearch';
 
 import './index.css';
 
 const Main = () => (
+	<div className='main'>
 	<ReactiveBase
 		app="myappdemo"
-    	credentials='cnjg9Mh5k:c18fa74e-33d4-4460-807c-712b54e002f4' 
+    	credentials='cnjg9Mh5k:c18fa74e-33d4-4460-807c-712b54e002f4'
+		className='reactivebase' 
 	>
-	<CategorySearch
-		componentId="searchbox"
-		dataField="original_title"
-		categoryField="avarage_rating_rounded.keyword"
-		placeholder="Search"
-		style={{
-			padding: '5px',
-			marginTop: '10px',
-			marginBottom: '3rem'
-		}}
-	/>
+	<div className='category-search'>
+		<CategorySearch
+			componentId="searchbox"
+			dataField="original_title"
+			categoryField="avarage_rating_rounded.keyword"
+			placeholder="Search"
+			style={{
+				padding: '5px',
+				marginTop: '10px',
+				marginBottom: '3rem'
+			}}
+		/>
+	</div>
 	<div className="row reverse-labels">
 		<div className="col">
 			<SingleDropdownRange
@@ -89,6 +93,7 @@ const Main = () => (
 		</div>
 	</div>
 	</ReactiveBase>
+	</div>
 );
 
 export default Main;
