@@ -13,12 +13,12 @@ import './index.css';
 const Main = () => (
 	<ReactiveBase
 		app="myappdemo"
-    credentials='cnjg9Mh5k:c18fa74e-33d4-4460-807c-712b54e002f4' 
+    	credentials='cnjg9Mh5k:c18fa74e-33d4-4460-807c-712b54e002f4' 
 	>
 	<CategorySearch
 		componentId="searchbox"
-		dataField="model"
-		categoryField="original_title.keyword"
+		dataField="original_title"
+		categoryField="avarage_rating_rounded.keyword"
 		placeholder="Search"
 		style={{
 			padding: '5px',
@@ -30,7 +30,7 @@ const Main = () => (
 		<div className="col">
 			<SingleDropdownRange
 					componentId="BookSensor"
-					dataField="average_rating"
+					dataField="average_rating_rounded"
 					title="SingleDropdownRange"
 					data={[
 						{ start: 0, end: 3, label: 'Rating < 3' },
@@ -47,7 +47,7 @@ const Main = () => (
 				pagination
 				URLParams
 				react={{
-					and: 'BookSensor',
+					and: ['BookSensor', 'searchbox'],
 				}}
 				render={({ data }) => (
 					<ReactiveList.ResultCardsWrapper>
