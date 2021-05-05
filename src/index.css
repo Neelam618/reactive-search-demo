@@ -1,7 +1,6 @@
 /* layout */
 
 body {
-  /* max-width: 1200px; */
   margin: 0 auto;
   padding-top: 15px;
 }
@@ -18,7 +17,6 @@ padding: 15px;
 }
 
 .row > .col:first-child {
-/* border-right: 1px solid #ccc; */
 max-width: 400px;
 }
 
@@ -76,87 +74,10 @@ font-weight: bold;
 padding: 10px 0;
 }
 
-.avg-rating {
-color: #6b6b6b;
-margin-left: 5px;
-}
-
-.stars {
-color: gold;
-}
-
-.location {
-color: salmon;
-margin-right: 5px;
-}
-
-.meetup-location {
-margin: 4px 0;
-}
-
 .card-title {
 white-space: normal;
 margin-top: 4px;
 }
-
-.book-title-card {
-white-space: normal;
-margin-top: 4px;
-max-height: 45px;
-}
-
-.book-image {
-height: 150px;
-width: 110px;
-background-size: cover;
-}
-
-.book-header {
-font-weight: bold;
-margin-bottom: 5px;
-}
-
-.book-content {
-background: white;
-margin: 10px 0;
-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-}
-
-.meetup-title {
-white-space: normal;
-}
-
-.meetup-topics {
-height: 35px;
-overflow: hidden;
-}
-
-.meetup-topic {
-background-color: #dedede;
-  color: #555;
-padding: 5px 10px;
-margin: 5px;
-border-radius: 4px;
-}
-
-.meetup-topic:first-child {
-margin-left: 0;
-}
-
-.col .meetup-list-image {
-background-size: cover;
-}
-
-.main {
-  max-width: 1500px;
-  margin: 0  auto;
-}
-
-/* .css-y5rags-Card {
-  max-width: 350px !important;
-  min-width: 300px !important;
-  width: 300px !important;
-} */
 
 .css-12v9vzr-container a{
   max-width: 350px !important;
