@@ -33,21 +33,21 @@ const Main = () => (
 	<div className="row reverse-labels">
 		<div className="col">
 			<SingleDropdownRange
-					componentId="BookSensor"
-					dataField="average_rating_rounded"
-					title="SingleDropdownRange"
-					data={[
-						{ start: 0, end: 3, label: 'Rating < 3' },
-						{ start: 3, end: 4, label: 'Rating 3 to 4' },
-						{ start: 4, end: 5, label: 'Rating > 4' },
-					]}
+				componentId="BookSensor"
+				dataField="average_rating_rounded"
+				title="SingleDropdownRange"
+				data={[
+					{ start: 0, end: 3, label: 'Rating < 3' },
+					{ start: 3, end: 4, label: 'Rating 3 to 4' },
+					{ start: 4, end: 5, label: 'Rating > 4' },
+				]}
 			/>
 		</div>
 		<div className="col" style={{ backgroundColor: '#fafafa' }}>
 			<ReactiveList
 				componentId="SearchResult"
 				dataField="original_title"
-				size={10}
+				size={12}
 				pagination
 				URLParams
 				react={{
@@ -56,7 +56,7 @@ const Main = () => (
 				render={({ data }) => (
 					<ReactiveList.ResultCardsWrapper>
 						{data.map(item => (
-							<ResultCard key={item.id}>
+							<ResultCard href={item.url} key={item.id}>
 								<ResultCard.Image src={item.image} />
 								<ResultCard.Title>
 									<div

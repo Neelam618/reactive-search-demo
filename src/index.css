@@ -152,8 +152,14 @@ background-size: cover;
   margin: 0  auto;
 }
 
-.css-y5rags-Card {
+/* .css-y5rags-Card {
   max-width: 350px !important;
-  min-width: inherit !important;
+  min-width: 300px !important;
+  width: 300px !important;
+} */
+
+.css-12v9vzr-container a{
+  max-width: 350px !important;
+  min-width: 300px !important;
   width: 300px !important;
 }
