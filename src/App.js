@@ -58,33 +58,32 @@ const Main = () => (
 						{data.map(item => (
 							<ResultCard href={item.url} key={item.id}>
 								<ResultCard.Image src={item.image} />
-								<ResultCard.Title>
-									<div
-										className="card-title"
-										dangerouslySetInnerHTML={{
-											__html: item.original_title,
-										}}
-									/>
-								</ResultCard.Title>
-
-								<ResultCard.Description>
-									<div className="flex column justify-space-between">
-										<div>
-											<div>
-												by{' '}
-												<span className="authors-list">
-													{item.authors}
-												</span>
+								<div className='card-content'>
+									<div>
+										<ResultCard.Title>
+											<div
+												className="card-title"
+												dangerouslySetInnerHTML={{
+													__html: item.original_title,
+												}}
+											/>
+										</ResultCard.Title>
+										<ResultCard.Description>
+											<div className="authors-list">
+												by{' '}{item.authors}
 											</div>
 											<div className="ratings-list">
 												{'*'.repeat(item.average_rating_rounded)}
 											</div>
-										</div>
-										<span className="pub-year">
-											Pub {item.original_publication_year}
-										</span>
+											<span className="pub-year">
+												Pub {item.original_publication_year}
+											</span>
+										</ResultCard.Description>
 									</div>
-								</ResultCard.Description>
+									<div className='item-price'>
+										${item.price}
+									</div>
+								</div>
 							</ResultCard>
 						))}
 					</ReactiveList.ResultCardsWrapper>

@@ -163,3 +163,16 @@ background-size: cover;
   min-width: 300px !important;
   width: 300px !important;
 }
+
+.card-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-price {
+  align-self:flex-end;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  font-size: 18px;
+  font-weight: bold;
+}
