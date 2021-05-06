@@ -86,7 +86,6 @@ const Main = () => (
 							{data.map(item => (
 								<ResultCard href={item.url} key={item.id}>
 									<ResultCard.Image src={item.image} />
-									<div className='card-content'>
 										<div style={{overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
 											<ResultCard.Title>
 												<div
@@ -96,22 +95,26 @@ const Main = () => (
 													}}
 												/>
 											</ResultCard.Title>
-											<ResultCard.Description>
-												<div className="authors-list">
-													by{' '}{item.authors}
+											<div className="card-content">
+												<ResultCard.Description>
+													<div className="authors-list">
+														<i>by</i>{' '}{item.authors}
+													</div>
+													<div className='item-price'>
+														${item.price}
+													</div>
+													<div className="ratings-list">
+														{Array.apply(null, { length: item.average_rating_rounded }).map(() => {
+															return <img src={star} alt="" width="15px" style={{marginRight: 2}}/>
+														})}
+													</div>
+													<div className='sales'>{item.sales} Sales</div>
+												</ResultCard.Description>
+												<div style={{alignSelf: 'flex-end'}}>
+													<a href="#">Preview</a>
 												</div>
-												<div className="ratings-list">
-													{Array.apply(null, { length: item.average_rating_rounded }).map(() => {
-														return <img src={star} alt="" width="15px" style={{marginRight: 2}}/>
-													})}
-												</div>
-												<div>{item.sales} Sales</div>
-											</ResultCard.Description>
+											</div>
 										</div>
-										<div className='item-price'>
-											${item.price}
-										</div>
-									</div>
 								</ResultCard>
 							))}
 						</ReactiveList.ResultCardsWrapper>

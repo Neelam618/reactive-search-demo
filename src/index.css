@@ -67,11 +67,10 @@ text-align: center;
 
 .authors-list {
 color: #9d9d9d;
-font-weight: bold;
 }
 
 .ratings-list {
-padding: 10px 0;
+  padding-top: 10px;
 }
 
 .card-title {
@@ -94,7 +93,7 @@ padding: 10px 0;
 .css-12v9vzr-container a{
   max-width: 1104px !important;
   min-width: 300px !important;
-  width: 320px !important;
+  width: 350px !important;
   height: auto;
 }
 
@@ -104,9 +103,11 @@ padding: 10px 0;
 }
 
 .item-price {
-  align-self:flex-end;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
+  color: #4d4d4d;
+  margin-top: 1rem;
   font-size: 18px;
   font-weight: bold;
+}
+.sales {
+  color: #999;
 }
