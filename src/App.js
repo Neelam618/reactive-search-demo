@@ -1,4 +1,5 @@
 import React from 'react';
+import star from './star.svg';
 
 import {
 	ReactiveBase,
@@ -100,7 +101,9 @@ const Main = () => (
 													by{' '}{item.authors}
 												</div>
 												<div className="ratings-list">
-													{'*'.repeat(item.average_rating_rounded)}
+													{Array.apply(null, { length: item.average_rating_rounded }).map(() => {
+														return <img src={star} alt="" width="15px" style={{marginRight: 2}}/>
+													})}
 												</div>
 												<div>{item.sales} Sales</div>
 											</ResultCard.Description>
