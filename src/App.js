@@ -49,7 +49,7 @@ const Main = () => (
 					dataField="price"
 					title="Price"
 					range={{
-						"start": 0,
+						"start": 8,
 						"end": 80
 					}}
 					defaultValue={{
@@ -65,7 +65,7 @@ const Main = () => (
 					showHistogram={true}
 					interval={2}
 					react={{
-						and: ["CategoryFilter", "SearchFilter"]
+						and: ["CategoryFilter", "SearchFilter", "RangeInputSensor"]
 					}}
 					URLParams={false}
 					style={{marginTop: 30}}
@@ -79,7 +79,7 @@ const Main = () => (
 					pagination
 					URLParams
 					react={{
-						and: ['BookSensor', 'searchbox'],
+						and: ['BookSensor', 'searchbox', 'RangeInputSensor'],
 					}}
 					render={({ data }) => (
 						<ReactiveList.ResultCardsWrapper>
