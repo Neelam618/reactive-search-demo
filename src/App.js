@@ -1,5 +1,6 @@
 import React from 'react';
 import star from './star.svg';
+import cart from './cart.svg';
 
 import {
 	ReactiveBase,
@@ -110,8 +111,9 @@ const Main = () => (
 													</div>
 													<div className='sales'>{item.sales} Sales</div>
 												</ResultCard.Description>
-												<div style={{alignSelf: 'flex-end'}}>
-													<a href="#">Preview</a>
+												<div className='card-content-links'>
+													<a href={item.preview_link} target="_blank" className='preview-link'>Preview</a>
+													<a href={item.url} target="_blank" className='cart-link'><img src={cart} width="15px"></img></a>
 												</div>
 											</div>
 										</div>
