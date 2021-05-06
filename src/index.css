@@ -79,10 +79,18 @@ white-space: normal;
 margin-top: 4px;
 }
 
+.css-149suws-Card {
+  margin: 20px !important;
+}
+
+.css-197a8cc-Image{
+  background-size: cover !important;
+}
 .css-12v9vzr-container a{
-  max-width: 350px !important;
+  max-width: 1104px !important;
   min-width: 300px !important;
-  width: 300px !important;
+  width: 320px !important;
+  height: auto;
 }
 
 .card-content {

@@ -17,7 +17,7 @@ const Main = () => (
 		app="myappdemo"
     	credentials='cnjg9Mh5k:c18fa74e-33d4-4460-807c-712b54e002f4'
 		className='reactivebase'
-		style={{maxWidth: 1500, margin: '0 auto'}} 
+		style={{maxWidth: 1600, margin: '0 auto'}} 
 	>
 		<div className='category-search'>
 			<CategorySearch
