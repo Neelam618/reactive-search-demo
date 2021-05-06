@@ -87,7 +87,7 @@ const Main = () => (
 								<ResultCard href={item.url} key={item.id}>
 									<ResultCard.Image src={item.image} />
 									<div className='card-content'>
-										<div>
+										<div style={{overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
 											<ResultCard.Title>
 												<div
 													className="card-title"

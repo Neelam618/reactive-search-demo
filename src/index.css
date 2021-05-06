@@ -17,7 +17,7 @@ padding: 15px;
 }
 
 .row > .col:first-child {
-max-width: 400px;
+max-width: 350px;
 }
 
 .row > .col:last-child {
@@ -75,8 +75,13 @@ padding: 10px 0;
 }
 
 .card-title {
-white-space: normal;
-margin-top: 4px;
+  position: relative !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  margin-top: 4px;
+  color: #4d4d4d;
+  font-size: 1rem;
 }
 
 .css-149suws-Card {
