@@ -7,7 +7,7 @@ import {
 	SingleDropdownRange,
 	ResultCard,
 	ReactiveList,
-  	CategorySearch,
+	DataSearch,
 	RangeInput
 } from '@appbaseio/reactivesearch';
 
@@ -20,18 +20,28 @@ const Main = () => (
 		className='reactivebase'
 		style={{maxWidth: 1600, margin: '0 auto'}} 
 	>
-		<div className='category-search'>
-			<CategorySearch
+		<div className='datasearch'>
+			<DataSearch
 				componentId="searchbox"
-				dataField="title"
-				categoryField="avarage_rating_rounded.keyword"
+				dataField={["title", "author"]}
+				title="Search"
+				fieldWeights={[1, 3]}
 				placeholder="Search"
-				style={{
-					padding: '5px',
-					marginTop: '10px',
-					marginBottom: '3rem'
+				autosuggest={true}
+				showClear={true}
+				// defaultSuggestions={[{label: "Wordpress", value: "Wordpress"}, {label: "Figma", value: "Figma"}]}
+				highlight={true}
+				highlightField="title"
+				queryFormat="or"
+				fuzziness={0}
+				debounce={100}
+				react={{
+					and: ["CategoryFilter", "SearchFilter"]
 				}}
-			/>
+				showFilter={true}
+				filterLabel="Venue filter"
+				URLParams={true}
+				/>
 		</div>
 		<div className="row reverse-labels">
 			<div className="col">
@@ -39,6 +49,7 @@ const Main = () => (
 					componentId="TemplateSensor"
 					dataField="average_rating_rounded"
 					title="Rating"
+					URLParams={true}
 					data={[
 						{ start: 0, end: 3, label: 'Rating < 3' },
 						{ start: 3, end: 4, label: 'Rating 3 to 4' },
@@ -68,7 +79,7 @@ const Main = () => (
 					react={{
 						and: ["CategoryFilter", "SearchFilter", "RangeInputSensor"]
 					}}
-					URLParams={false}
+					URLParams
 					style={{marginTop: 30}}
 				/>
 			</div>

@@ -4,7 +4,9 @@ body {
   margin: 0 auto;
   padding-top: 15px;
 }
-
+.datasearch {
+  padding: 15px;
+}
 .row {
 display: flex;
 flex-direction: row;
