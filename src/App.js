@@ -36,9 +36,9 @@ const Main = () => (
 		<div className="row reverse-labels">
 			<div className="col">
 				<SingleDropdownRange
-					componentId="BookSensor"
+					componentId="TemplateSensor"
 					dataField="average_rating_rounded"
-					title="SingleDropdownRange"
+					title="Rating"
 					data={[
 						{ start: 0, end: 3, label: 'Rating < 3' },
 						{ start: 3, end: 4, label: 'Rating 3 to 4' },
@@ -80,7 +80,7 @@ const Main = () => (
 					pagination
 					URLParams
 					react={{
-						and: ['BookSensor', 'searchbox', 'RangeInputSensor'],
+						and: ['TemplateSensor', 'searchbox', 'RangeInputSensor'],
 					}}
 					render={({ data }) => (
 						<ReactiveList.ResultCardsWrapper>

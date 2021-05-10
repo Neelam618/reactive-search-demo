@@ -96,6 +96,7 @@ width: 100%;
   min-width: 300px !important;
   width: 350px !important;
   height: auto;
+  box-shadow: 0 0 16px #ccc;
 }
 
 .css-149suws-Card h2 {
@@ -120,6 +121,7 @@ width: 100%;
   font-weight: bold;
   font-size: 14px;
   margin-right: 5px;
+  box-shadow: none !important;
 }
 .preview-link:hover {
   background-color: #ccc;
@@ -130,6 +132,7 @@ width: 100%;
   border: 1px solid #79b530;
   padding: 9px 13px;
   border-radius: 3px;
+  box-shadow: none !important;
 }
 .cart-link:hover{
   border: 1px solid black;
